@@ -16,6 +16,7 @@ HOOP_50X50 = 1
 HOOP_140X200 = 2
 HOOP_126X110 = 3
 HOOP_200X200 = 4
+HOOP_200X280 = 5
 
 
 def write(pattern, f, settings=None):
@@ -178,6 +179,8 @@ def get_jef_hoop_size(width, height):
         return HOOP_140X200
     if width < 2000 and height < 2000:
         return HOOP_200X200
+    if width < 2000 and height < 2800:
+        return HOOP_200X280
     return HOOP_110X110
 
 
